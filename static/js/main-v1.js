@@ -41,6 +41,9 @@ function getData() {
         for (let plugin in sortArray){
             window.setTimeout(add_elements, 5, sortArray[plugin]);
         }
+        let totalInstalls = sortArray.reduce((acc, o) => acc + parseInt(o.total), 0)
+        var container = document.getElementById('statsTotal')
+        container.innerText = 'Total Plugin Installs: ' + totalInstalls
     })
 }
 
