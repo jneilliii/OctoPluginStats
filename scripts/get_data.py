@@ -76,7 +76,7 @@ for plugin in response:
                 {
                     "date": TODAY,
                     "total": plugin["stats"]["instances_month"],
-                    "issues": plugin["github"]["issues"]
+                    "issues": plugin["github"]["issues"] if "github" in plugin else 0
                 }
             )
 
